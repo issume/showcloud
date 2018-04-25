@@ -1,0 +1,362 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.showcloud.entity.SysUser">
+  <resultMap id="BaseResultMap" type="com.showcloud.entity.SysUser">
+    <id column="id" jdbcType="VARCHAR" property="id" />
+    <result column="username" jdbcType="VARCHAR" property="username" />
+    <result column="password" jdbcType="VARCHAR" property="password" />
+    <result column="sex" jdbcType="CHAR" property="sex" />
+    <result column="birthday" jdbcType="TIMESTAMP" property="birthday" />
+    <result column="email" jdbcType="VARCHAR" property="email" />
+    <result column="contact" jdbcType="VARCHAR" property="contact" />
+    <result column="online_state" jdbcType="CHAR" property="onlineState" />
+    <result column="last_login_time" jdbcType="TIMESTAMP" property="lastLoginTime" />
+    <result column="last_logout_time" jdbcType="TIMESTAMP" property="lastLogoutTime" />    
+    <result column="user_state" jdbcType="VARCHAR" property="userState" />
+    <result column="salt" jdbcType="VARCHAR" property="salt" />
+    <result column="create_user" jdbcType="VARCHAR" property="createUser" />
+    <result column="create_datetime" jdbcType="TIMESTAMP" property="createDatetime" />
+    <result column="modify_user" jdbcType="VARCHAR" property="modifyUser" />
+    <result column="modify_datetime" jdbcType="TIMESTAMP" property="modifyDatetime" />
+    <result column="delete_flag" jdbcType="CHAR" property="deleteFlag" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, username, password, sex, birthday, email, contact, online_state, last_login_time, 
+    last_logout_time,  user_state, salt,  create_user, create_datetime, modify_user, modify_datetime, delete_flag
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from sys_user
+    where id = #{id,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    delete from sys_user
+    where id = #{id,jdbcType=VARCHAR}
+  </delete>
+  
+  <insert id="insertSelective" parameterType="com.showcloud.entity.SysUser">
+    insert into sys_user
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="username != null">
+        username,
+      </if>
+      <if test="password != null">
+        password,
+      </if>
+      <if test="sex != null">
+        sex,
+      </if>
+      <if test="birthday != null">
+        birthday,
+      </if>
+      <if test="email != null">
+        email,
+      </if>
+      <if test="contact != null">
+        contact,
+      </if>
+      <if test="onlineState != null">
+        online_state,
+      </if>
+      <if test="lastLoginTime != null">
+        last_login_time,
+      </if>
+      <if test="lastLogoutTime != null">
+        last_logout_time,
+      </if>     
+      <if test="userState != null">
+        user_state,
+      </if>
+      <if test="salt != null">
+        salt,
+      </if>
+      <if test="createUser != null">
+        create_user,
+      </if>
+      <if test="createDatetime != null">
+        create_datetime,
+      </if>
+      <if test="modifyUser != null">
+        modify_user,
+      </if>
+     <!--  <if test="modifyDatetime != null">
+        modify_datetime,
+      </if> -->
+      <if test="deleteFlag != null">
+        delete_flag,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=VARCHAR},
+      </if>
+      <if test="username != null">
+        #{username,jdbcType=VARCHAR},
+      </if>
+      <if test="password != null">
+        #{password,jdbcType=VARCHAR},
+      </if>
+      <if test="sex != null">
+        #{sex,jdbcType=CHAR},
+      </if>
+      <if test="birthday != null">
+        #{birthday,jdbcType=TIMESTAMP},
+      </if>
+      <if test="email != null">
+        #{email,jdbcType=VARCHAR},
+      </if>
+      <if test="contact != null">
+        #{contact,jdbcType=VARCHAR},
+      </if>
+      <if test="onlineState != null">
+        #{onlineState,jdbcType=CHAR},
+      </if>
+      <if test="lastLoginTime != null">
+        #{lastLoginTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="lastLogoutTime != null">
+        #{lastLogoutTime,jdbcType=TIMESTAMP},
+      </if>     
+      <if test="userState != null">
+        #{userState,jdbcType=VARCHAR},
+      </if>
+      <if test="salt != null">
+        #{salt,jdbcType=VARCHAR},
+      </if>
+      <if test="createUser != null">
+        #{createUser,jdbcType=VARCHAR},
+      </if>
+      <if test="createDatetime != null">
+        #{createDatetime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="modifyUser != null">
+        #{modifyUser,jdbcType=VARCHAR},
+      </if>
+     <!--  <if test="modifyDatetime != null">
+        #{modifyDatetime,jdbcType=TIMESTAMP},
+      </if> -->
+      <if test="deleteFlag != null">
+        #{deleteFlag,jdbcType=CHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.showcloud.entity.SysUser">
+    update sys_user
+    <set>
+      <if test="username != null">
+        username = #{username,jdbcType=VARCHAR},
+      </if>
+      <if test="password != null">
+        password = #{password,jdbcType=VARCHAR},
+      </if>
+      <if test="sex != null">
+        sex = #{sex,jdbcType=CHAR},
+      </if>
+      <if test="birthday != null">
+        birthday = #{birthday,jdbcType=TIMESTAMP},
+      </if>
+      <if test="email != null">
+        email = #{email,jdbcType=VARCHAR},
+      </if>
+      <if test="contact != null">
+        contact = #{contact,jdbcType=VARCHAR},
+      </if>
+      <if test="onlineState != null">
+        online_state = #{onlineState,jdbcType=CHAR},
+      </if>
+      <if test="lastLoginTime != null">
+        last_login_time = #{lastLoginTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="lastLogoutTime != null">
+        last_logout_time = #{lastLogoutTime,jdbcType=TIMESTAMP},
+      </if>    
+      <if test="userState != null">
+        user_state = #{userState,jdbcType=VARCHAR},
+      </if>
+      <if test="salt != null">
+        salt = #{salt,jdbcType=VARCHAR},
+      </if>      
+      <if test="createUser != null">
+        create_user = #{createUser,jdbcType=VARCHAR},
+      </if>
+      <if test="createDatetime != null">
+        create_datetime = #{createDatetime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="modifyUser != null">
+        modify_user = #{modifyUser,jdbcType=VARCHAR},
+      </if>
+      <if test="modifyDatetime != null">
+        modify_datetime = #{modifyDatetime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="deleteFlag != null">
+        delete_flag = #{deleteFlag,jdbcType=CHAR},
+      </if>     
+    </set>
+    where id = #{id,jdbcType=VARCHAR}
+  </update>  
+ 
+  <select id="listAllByParam" resultMap="BaseResultMap" parameterType="java.util.Map">
+   	select 
+	<include refid="Base_Column_List" />
+ 	from sys_user
+   	<where>
+      <include refid="Where_Clause_Object" />
+    </where>    
+  </select>
+  
+   <select id="listBypwdAndName" resultMap="BaseResultMap" parameterType="java.util.Map">
+   	select 
+	<include refid="Base_Column_List" />
+ 	from sys_user
+ 	<where>
+ 	 	<if test="username != null and username !=''" >
+ 	 		and username = #{username} 
+ 	 	</if>
+ 	 	<if test="password != null and password !=''" >
+ 	 		and password= #{password}
+ 	 	</if>
+ 	 	and delete_flag!='D'
+ 	</where>  
+  </select>
+  
+  <select id="listSysUser" resultMap="BaseResultMap" parameterType="java.util.Map">
+   	select 
+	<include refid="Base_Column_List" />
+ 	from sys_user
+   	<where>
+      <include refid="Where_Clause_Object" />
+    </where>
+    <if test="orderCondition != null" >
+      order by ${orderCondition} ${orderDirection}
+    </if>
+    <if test="offSet!=null" >
+      limit ${offSet}, ${pageSize}
+    </if>
+  </select>
+   
+   <select id="countSysUser" resultType="java.lang.Integer" parameterType="java.util.Map">
+   	   select count(id) from sys_user
+	   <where>
+	      <include refid="Where_Clause_Object" />
+	    </where>
+	</select>
+	
+   <sql id="Where_Clause_Object">
+   	<if test="sysUser.username != null and sysUser.username != ''">
+         and username like CONCAT(CONCAT('%',#{sysUser.username}),'%')
+      </if>
+      <if test="sysUser.password != null and sysUser.password != ''">
+        and password = #{sysUser.password,jdbcType=VARCHAR}
+      </if>
+      <if test="sysUser.sex != null and sysUser.sex != ''">
+        and sex = #{sysUser.sex,jdbcType=CHAR}
+      </if>
+      <if test="sysUser.birthday != null and sysUser.birthday !=''">
+        and birthday = #{sysUser.birthday,jdbcType=TIMESTAMP}
+      </if>
+      <if test="sysUser.email != null and sysUser.email !=''">
+        and email = #{sysUser.email,jdbcType=VARCHAR}
+      </if>
+      <if test="sysUser.contact != null and sysUser.contact !=''">
+        and contact like CONCAT(CONCAT('%',#{sysUser.contact}),'%')
+      </if>
+      <if test="sysUser.onlineState != null and sysUser.onlineState !=''">
+        and online_state = #{sysUser.onlineState,jdbcType=CHAR}
+      </if>
+      <if test="sysUser.lastLoginTime != null">
+        and last_login_time = #{sysUser.lastLoginTime,jdbcType=TIMESTAMP}
+      </if>
+      <if test="sysUser.lastLogoutTime != null">
+        and last_logout_time = #{sysUser.lastLogoutTime,jdbcType=TIMESTAMP}
+      </if>      
+      <if test="sysUser.userState != null and sysUser.userState !=''">
+        and user_state = #{sysUser.userState,jdbcType=VARCHAR}
+      </if>
+      <if test="sysUser.salt != null and sysUser.salt !=''">
+        and salt = #{sysUser.salt,jdbcType=VARCHAR}
+      </if>     
+      <if test="sysUser.createUser != null">
+        and create_user = #{sysUser.createUser,jdbcType=VARCHAR}
+      </if>
+      <if test="sysUser.createDatetime != null">
+        and create_datetime = #{sysUser.createDatetime,jdbcType=TIMESTAMP}
+      </if>
+      <if test="sysUser.modifyUser != null">
+        and modify_user = #{sysUser.modifyUser,jdbcType=VARCHAR}
+      </if>
+      <if test="sysUser.modifyDatetime != null">
+        and modify_datetime = #{sysUser.modifyDatetime,jdbcType=TIMESTAMP}
+      </if>      
+      <if test="sysUser.deleteFlag != null" >
+       	<choose>
+	      	<when test="sysUser.deleteFlag == 'noteqdelete'">
+	      		and delete_flag != 'D'
+	      	</when>
+	      	<otherwise>
+	      		and delete_flag = #{sysUser.deleteFlag,jdbcType=CHAR}
+	      	</otherwise>
+	      </choose>
+      </if>      
+   </sql>
+  
+  
+  <update id="updateselectByIds" parameterType="java.util.Map" >
+  	update sys_user 
+  	<set>
+      <if test="username != null">
+        username = #{username,jdbcType=VARCHAR},
+      </if>
+      <if test="password != null">
+        password = #{password,jdbcType=VARCHAR},
+      </if>
+      <if test="sex != null">
+        sex = #{sex,jdbcType=CHAR},
+      </if>
+      <if test="birthday != null">
+        birthday = #{birthday,jdbcType=TIMESTAMP},
+      </if>
+      <if test="email != null">
+        email = #{email,jdbcType=VARCHAR},
+      </if>
+      <if test="contact != null">
+        contact = #{contact,jdbcType=VARCHAR},
+      </if>
+      <if test="onlineState != null">
+        online_state = #{onlineState,jdbcType=CHAR},
+      </if>
+      <if test="lastLoginTime != null">
+        last_login_time = #{lastLoginTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="lastLogoutTime != null">
+        last_logout_time = #{lastLogoutTime,jdbcType=TIMESTAMP},
+      </if>      
+      <if test="userState != null">
+        user_state = #{userState,jdbcType=VARCHAR},
+      </if>
+      <if test="salt != null">
+        salt = #{salt,jdbcType=VARCHAR},
+      </if>
+     
+      <if test="createUser != null">
+        create_user = #{createUser,jdbcType=VARCHAR},
+      </if>
+      <if test="createDatetime != null">
+        create_datetime = #{createDatetime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="modifyUser != null">
+        modify_user = #{modifyUser,jdbcType=VARCHAR},
+      </if>
+      <if test="modifyDatetime != null">
+        modify_datetime = #{modifyDatetime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="deleteFlag != null">
+        delete_flag = #{deleteFlag,jdbcType=CHAR},
+      </if>      
+    </set>
+    where <![CDATA[ id in (${idsIn}) ]]>
+  </update>
+</mapper>

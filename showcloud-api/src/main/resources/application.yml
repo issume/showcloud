@@ -3,7 +3,7 @@ server:
   context-path: /showcloud
 
 druid: 
-   url: jdbc:mysql://127.0.0.1:3306/showcloud?useUnicode=true&characterEncoding=utf8&allowMultiQueries=true&useSSL=false
+   url: jdbc:mysql://127.0.0.1:3306/showcloud
    username: root
    password: password
    initialSize: 10
@@ -18,4 +18,5 @@ druid:
    testOnReturn: false
    poolPreparedStatements: true
    maxPoolPreparedStatementPerConnectionSize: 20
-   filters: stat ,wall 
+   # 配置监控统计拦截的filters，去掉后监控界面sql无法统计，'wall'用于防火墙
+   filters: stat,wall,log4j

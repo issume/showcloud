@@ -3,6 +3,7 @@ package com.showcloud.dao;
 import java.io.Serializable;
 import java.lang.reflect.ParameterizedType;
 import java.lang.reflect.Type;
+import java.sql.SQLException;
 import java.text.MessageFormat;
 import java.util.HashMap;
 import java.util.List;
@@ -43,8 +44,7 @@ public class BaseDaoImpl<T, PK extends Serializable> implements BaseDao<T,PK> {
      * @return
      */
     @Override
-    public T save(T entity) {
-
+    public T save(T entity) {    
         sqlSession.insert(MessageFormat.format("{0}.insertSelective", entityClass.getName()),entity);
         return entity;
     }

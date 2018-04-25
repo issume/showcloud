@@ -2,23 +2,15 @@ package com.showcloud.api;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.context.annotation.ComponentScan;
 
-@RestController
-@SpringBootApplication(exclude={DataSourceAutoConfiguration.class})
+@SpringBootApplication
+@ComponentScan("com.showcloud")
 public class Application {
 
 
     public static void main(String[] args) {        
         SpringApplication.run(Application.class);
     }
-
-    @RequestMapping("/info")
-    public String info(){
-    	return "{status:success}";
-    }
-  
 
 }
