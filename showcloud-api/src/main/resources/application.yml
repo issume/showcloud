@@ -1,0 +1,21 @@
+#路径和端口号
+server:
+  context-path: /showcloud
+
+druid: 
+   url: jdbc:mysql://127.0.0.1:3306/showcloud?useUnicode=true&characterEncoding=utf8&allowMultiQueries=true&useSSL=false
+   username: root
+   password: password
+   initialSize: 10
+   minIdle: 20
+   maxActive: 200
+   maxWait: 6000
+   timeBetweenEvictionRunsMillis: 60000
+   minEvictableIdleTimeMillis: 300000
+   validationQuery: SELECT 'x'
+   testWhileIdle: true
+   testOnBorrow: false
+   testOnReturn: false
+   poolPreparedStatements: true
+   maxPoolPreparedStatementPerConnectionSize: 20
+   filters: stat ,wall 
