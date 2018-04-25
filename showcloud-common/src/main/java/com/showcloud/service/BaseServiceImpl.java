@@ -9,9 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import com.showcloud.common.Page;
 import com.showcloud.dao.BaseDao;
 
-/**
- * Created by WangIJia on 2016/10/25.
- */
+
 public class BaseServiceImpl<T, PK extends Serializable> implements BaseService<T, PK>{
 
     @Autowired
