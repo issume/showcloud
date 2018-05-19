@@ -3,11 +3,12 @@ package com.showcloud.common;
 import java.io.Serializable;
 import java.util.List;
 
-/**
- * Created by WangIJia on 2016/10/25.
- * 分页对象封装
- */
 
+/**
+ * @author hym
+ * 分页对象的封装
+ * @param <T>
+ */
 public class Page<T> implements Serializable{
 
     /**
@@ -29,6 +30,7 @@ public class Page<T> implements Serializable{
      * 数据
      */
     private List<T> datas;
+    
 
     public Integer getOffset() {
         return offset;

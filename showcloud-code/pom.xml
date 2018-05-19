@@ -8,13 +8,11 @@
 		<artifactId>showcloud</artifactId>
 		<version>1.0</version>
 	</parent>
-	
-	<groupId>com.showcloud.common</groupId>
-	<artifactId>showcloud-common</artifactId>
+	<groupId>com.showcloud</groupId>
+	<artifactId>showcloud-code</artifactId>
 	<version>1.0</version>
-	<name>showcloud-common</name>
+	<name>showcloud-code</name>
 	<url>http://maven.apache.org</url>
-	
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
@@ -25,5 +23,17 @@
 			<version>3.8.1</version>
 			<scope>test</scope>
 		</dependency>
+		<dependency>
+			<groupId>com.showcloud.common</groupId>
+			<artifactId>showcloud-common</artifactId>
+			<version>1.0</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.freemarker/freemarker -->
+		<dependency>
+			<groupId>org.freemarker</groupId>
+			<artifactId>freemarker</artifactId>
+			<version>2.3.23</version>
+		</dependency>
+
 	</dependencies>
 </project>

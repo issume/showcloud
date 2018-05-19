@@ -124,5 +124,7 @@
 		<module>showcloud-service</module>
 		<module>showcloud-api</module>
 		<module>showcloud-mq</module>
+		<module>showcloud-code</module>
+		<module>showcloud-concurrent</module>
 	</modules>
 </project>

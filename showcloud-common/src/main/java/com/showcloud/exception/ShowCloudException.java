@@ -1,16 +1,21 @@
 package com.showcloud.exception;
 
+
 /**
- * @Author hym
- * @Date: Create in 2016/11/4
- * @Description:
+ * @author hym
+ * 自定义runtime Exception
  */
-public class ShowCloudException extends  Exception {
+public class ShowCloudException extends  RuntimeException {
 
     public ShowCloudException(){
-        super("weidianException");
+        super("showCloudException");
     }
+    
     public ShowCloudException(String msg){
         super(msg);
+    }
+    
+    public ShowCloudException(Throwable err,String msg){
+    	super(msg, err);
     }
 }

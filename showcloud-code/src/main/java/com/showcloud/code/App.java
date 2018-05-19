@@ -1,4 +1,4 @@
-package com.showcloud.common;
+package com.showcloud.code;
 
 /**
  * Hello world!
