@@ -24,7 +24,7 @@
 			<scope>test</scope>
 		</dependency>
 		<dependency>
-			<groupId>com.showcloud.common</groupId>
+			<groupId>com.showcloud</groupId>
 			<artifactId>showcloud-common</artifactId>
 			<version>1.0</version>
 		</dependency>

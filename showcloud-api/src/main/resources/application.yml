@@ -7,8 +7,8 @@ druid:
    username: root
    password: password
    initialSize: 10
-   minIdle: 20
-   maxActive: 200
+   minIdle: 10
+   maxActive: 20
    maxWait: 6000
    timeBetweenEvictionRunsMillis: 60000
    minEvictableIdleTimeMillis: 300000

@@ -8,7 +8,7 @@
 		<artifactId>showcloud</artifactId>
 		<version>1.0</version>
 	</parent>
-	<groupId>com.showcloud.mq</groupId>
+	<groupId>com.showcloud</groupId>
 	<artifactId>showcloud-mq</artifactId>
 	<version>1.0</version>
 	<name>showcloud-mq</name>
@@ -18,7 +18,7 @@
 	</properties>
 	<dependencies>
 		<dependency>
-			<groupId>com.showcloud.service</groupId>
+			<groupId>com.showcloud</groupId>
 			<artifactId>showcloud-service</artifactId>
 			<version>1.0</version>
 		</dependency>

@@ -8,7 +8,7 @@
 		<artifactId>showcloud</artifactId>
 		<version>1.0</version>
 	</parent>
-	<groupId>com.showcloud.service</groupId>
+	<groupId>com.showcloud</groupId>
 	<artifactId>showcloud-service</artifactId>
 	<version>1.0</version>
 	<name>showcloud-service</name>
@@ -18,7 +18,7 @@
 	</properties>
 	<dependencies>
 		<dependency>
-			<groupId>com.showcloud.dao</groupId>
+			<groupId>com.showcloud</groupId>
 			<artifactId>showcloud-dao</artifactId>
 			<version>1.0</version>
 		</dependency>
