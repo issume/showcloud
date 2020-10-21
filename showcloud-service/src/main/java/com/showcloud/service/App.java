@@ -1,8 +1,7 @@
 package com.showcloud.service;
 
 /**
- * Hello world!
- *
+ * service相关的操作类
  */
 public class App 
 {

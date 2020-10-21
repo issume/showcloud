@@ -9,15 +9,18 @@ import org.springframework.beans.factory.annotation.Autowired;
 import com.showcloud.common.Page;
 import com.showcloud.dao.BaseDao;
 
-
+/**
+ *  base dao
+ * @param <T>
+ * @param <PK>
+ */
 public class BaseServiceImpl<T, PK extends Serializable> implements BaseService<T, PK>{
 
     @Autowired
     protected BaseDao<T, PK> baseDao;
 
     /**
-     * 保存实体
-     *
+     * 保存数据
      * @param entity
      * @return
      */
@@ -27,7 +30,6 @@ public class BaseServiceImpl<T, PK extends Serializable> implements BaseService<
     }
 
     /**
-     * 更新实体
      *
      * @param entity
      * @return

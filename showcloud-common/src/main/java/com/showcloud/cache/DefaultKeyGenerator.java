@@ -7,10 +7,6 @@ import java.lang.reflect.Method;
 import java.text.SimpleDateFormat;
 import java.util.Arrays;
 
-/**
- * Created by WangIJia on 2016/11/9.
- * 自定义缓存数据 key 生成策略
- */
 public class DefaultKeyGenerator implements KeyGenerator {
 
     private static String[] types = { "java.lang.Integer", "java.lang.Double",

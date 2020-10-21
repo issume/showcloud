@@ -3,7 +3,6 @@ package com.showcloud.dao;
 import java.io.Serializable;
 import java.lang.reflect.ParameterizedType;
 import java.lang.reflect.Type;
-import java.sql.SQLException;
 import java.text.MessageFormat;
 import java.util.HashMap;
 import java.util.List;
@@ -13,7 +12,6 @@ import org.apache.ibatis.session.SqlSession;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import com.showcloud.common.Page;
-import com.showcloud.result.CommonParam;
 import com.showcloud.utils.StringUtil;
 
 public class BaseDaoImpl<T, PK extends Serializable> implements BaseDao<T,PK> {

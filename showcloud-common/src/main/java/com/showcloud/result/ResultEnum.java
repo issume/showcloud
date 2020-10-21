@@ -1,21 +1,21 @@
 package com.showcloud.result;
 
 public enum ResultEnum {
-	SUCCESS(1,"success"),AUTHFAIL(0,"auth fail");
-	
-	private int code;
-	private String msg;
-	
-	private ResultEnum(int code,String msg){
-		this.setCode(code);
-		this.setMsg(msg);
-	}
+    SUCCESS("0000", "success"),
+    AUTHFAIL("0001", "auth fail"),
+    ERROR("0002", "ERROR");
+    private String code;
+    private String msg;
 
-	public int getCode() {
+    private ResultEnum(String code, String msg) {
+        this.code = code;
+        this.msg = msg;
+    }
+	public String getCode() {
 		return code;
 	}
 
-	public void setCode(int code) {
+	public void setCode(String code) {
 		this.code = code;
 	}
 
